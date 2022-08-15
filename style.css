@@ -1,0 +1,101 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:sans-serif;
+}
+.banner{
+    width: 100%;
+    height:100vh;
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(img/background-image.jpg);
+    background-size:cover;
+    background-position:center;
+}
+.navbar{
+    width:80%;
+    margin:auto;
+    height:80px;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+}
+
+.brand img{
+    max-width:100%;
+    width:130px;
+    background-color:#eeee;
+    padding:10px 20px;
+    border-radius:9px;
+}
+.nav-link ul{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+.nav-link ul li{
+    display:inline-block;
+    margin:0 20px;
+    position:relative;
+}
+.nav-link ul li a{
+    color:white;
+    text-decoration:none;
+    font-size:15px;
+}
+.nav-link ul li::after{
+    content: "";
+    width:0;
+    height:3px;
+    background-color:brown;
+    position:absolute;
+    left:0;
+    bottom:-8px;
+    transition:0.3s all;
+}
+.nav-link ul li:hover::after{
+    width:100%;
+}
+.content{
+    width:100%;
+    position:absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align:center;
+}
+.content h1{
+    color:white;
+    font-size:60px;
+    text-transform:uppercase;
+}
+.content p{
+    color:aliceblue;
+    text-transform:capitalize;
+    margin:20px 0;
+    font-size:15px;
+}
+.content button{
+    outline:none;
+    padding:10px 40px;
+    background-color:transparent;
+    border:1px solid brown;
+    border-radius:20px;
+    margin-right:10px;
+    text-transform:uppercase;
+    font-size:16px;
+    margin-top:20px;
+    position:relative;
+    overflow:hidden;
+}
+span{
+    background-color:brown;
+    width:0;
+    height:100%;
+    position:absolute;
+    left:0;
+    bottom:0;
+    z-index: -2;
+    transition: 0.3s all;
+}
+button:hover span{
+    width:100%;
+}
